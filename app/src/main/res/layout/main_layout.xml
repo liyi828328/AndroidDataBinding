@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+    <Button
+        android:id="@+id/data_binding_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:text="基本View赋值更新、按钮点击监听" />
+
+    <Button
+        android:id="@+id/data_binding_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@color/mainColor"
+        android:text="图片加载" />
+
+    <Button
+        android:id="@+id/data_binding_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@color/mainColor"
+        android:text="ListView加载" />
+
+    <Button
+        android:id="@+id/data_binding_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@color/mainColor"
+        android:text="其它" />
+
+</LinearLayout>

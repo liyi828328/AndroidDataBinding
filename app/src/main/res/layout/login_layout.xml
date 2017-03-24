@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        这里你也可以为Binding类进行命名，有三种形式
+
+        1、Custom:会在databinding包下
+        2、.Custom:会在当前的包名下创建
+        3、perseverance.li.databinding.Custom:会在指定的包名下进行创建
+     -->
+
+    <data class=".LoginActivityBinding">
+
+        <!-- 这样写特别想java类import与使用，当类可以不用import，但是需要在variable的type属性中引入类的全路径 -->
+        <import type="perseverance.li.databinding.model.User" />
+
+        <import type="perseverance.li.databinding.utils.ClickHandler" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <variable
+            name="click"
+            type="ClickHandler" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{user.userNameHint}"
+            android:text="@={user.userName}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:hint="@{user.pwdHint}"
+            android:text="@={user.pwd}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@color/mainColor"
+            android:onClick="@{click.login}"
+            android:tag="@{user}"
+            android:text="登录" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@color/mainColor"
+            android:onClick="@{click.change}"
+            android:tag="@{user}"
+            android:text="更换用户" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding"
+            android:text="登录成功"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:visibility="@{user.loginSuccess ? View.VISIBLE : View.GONE}" />
+
+    </LinearLayout>
+</layout>
