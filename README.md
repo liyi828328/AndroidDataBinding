@@ -1,9 +1,10 @@
 # Android DataBinding
 
-本项目主要是帮助了解使用Android DataBinding双向绑定框架，这个框架给我们带来了很大的方便性，省去了Activity中findVieById，减少代码耦合性，是项目使用MVVM的理想助手。
+本项目主要是帮助了解使用Android DataBinding双向绑定框架，这个框架给我们带来了很大的方便性，省去了Activity中findVieById，减少代码耦合性等，是项目使用MVVM的理想助手。
 
 # 环境
 1.环境AS要求版本在1.3以上，这个基本都满足了。
+
 2.在项目build.gradle中配置
 	
     android {
